@@ -1,6 +1,8 @@
 # CDGoogleTranslateSwift
 A google translate wrapper written in Swift
 
+Currently suppports german, english, french, italian and spanish.
+
 #### Usage
 ```
 GTService.shared.translate(text: text, to: GTService.TargetLanguage.en) { result, error in
