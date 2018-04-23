@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     @IBAction func buttonAction() {
         guard let text = textField.text, !text.isEmpty else { return }
         
-        GTService.shared.translate(text: text, to: GTService.TargetLanguage.en) { result, error in            
+        GTService.shared.translate(text: text, to: .en) { result, error in
             let translation = result?.translation
             //let detectedLanguage = result?.detectedLanguage
             self.label.text = error?.localizedDescription ?? translation
