@@ -9,3 +9,8 @@ GTService.shared.translate(text: text, to: GTService.TargetLanguage.en) { result
     debugPrint(String(describing: error?.localizedDescription ?? translation))
 }
 ```
+
+#### CocoaPods
+```
+pod 'CDGoogleTranslateSwift', :git => 'https://github.com/ChristianDeckert/CDGoogleTranslateSwift.git', :branch => 'master'
+```
