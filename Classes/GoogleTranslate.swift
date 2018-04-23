@@ -12,6 +12,28 @@ public class GTService: NSObject {
         case es = "es"
     }
     
+    public enum SourceLanguage: String {
+        case auto = "auto"
+        case en = "en"
+        case de = "de"
+        case fr = "fr"
+        case it = "it"
+        case es = "es"
+        
+        static var currentLanguage: SourceLanguage {
+            guard let locale = Locale.current.identifier.components(separatedBy: "_").first?.lowercased() else { return .auto }
+            
+            switch locale {
+            case "de": return .de
+            case "en": return .en
+            case "fr": return .fr
+            case "it": return .it
+            case "es": return .es
+            default: return .auto
+            }
+        }
+    }
+    
     public struct Result {
         public let source: String
         public let translation: String
@@ -28,14 +50,14 @@ public class GTService: NSObject {
         return URLSessionConfiguration.default
     }()
     
-    private func url(source: String, targetLanguage: TargetLanguage) -> String {
-        return "https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=\(targetLanguage.rawValue)&dt=t&q=\(source)"
+    private func url(sourceText: String, targetLanguage: TargetLanguage, sourceLanguage: SourceLanguage = .auto) -> String {
+        return "https://translate.googleapis.com/translate_a/single?client=gtx&sl=\(sourceLanguage.rawValue)&tl=\(targetLanguage.rawValue)&dt=t&q=\(sourceText)"
     }
     
-    @discardableResult public func translate(text: String, to targetLanguage: TargetLanguage, completion: @escaping GTServiceBlock) -> Bool {
+    @discardableResult public func translate(text: String, to targetLanguage: TargetLanguage, from sourceLanguage: SourceLanguage = .auto,completion: @escaping GTServiceBlock) -> Bool {
         guard !text.isEmpty else { return false }
         guard let escapedText = text.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else { return false }
-        guard let url = URL(string: url(source: escapedText, targetLanguage: targetLanguage)) else { return false }
+        guard let url = URL(string: url(sourceText: escapedText, targetLanguage: targetLanguage, sourceLanguage: sourceLanguage)) else { return false }
         
         let task = urlSession.dataTask(with: url, completionHandler: { data, response, error in
             if let error = error {

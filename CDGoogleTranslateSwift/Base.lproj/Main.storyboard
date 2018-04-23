@@ -21,7 +21,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="dlE-eF-rD7">
                                 <rect key="frame" x="32" y="216" width="311" height="191"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Hallo Welt" borderStyle="roundedRect" placeholder="Text to translate" textAlignment="center" minimumFontSize="8" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="OnS-dX-wA2">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="die Wälder" borderStyle="roundedRect" placeholder="Text to translate" textAlignment="center" minimumFontSize="8" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="OnS-dX-wA2">
                                         <rect key="frame" x="0.0" y="0.0" width="311" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="f5F-Zk-Mss"/>
