@@ -7,7 +7,7 @@ Currently suppports german, english, french, italian and spanish.
 ```
 GTService.shared.translate(text: "die Wälder", to: .en) { result, error in
     let translation = result?.translation // returns the woods
-    //let detectedLanguage = result?.detectedLanguage
+    //let detectedLanguage = result?.detectedLanguage // returns "de"
     debugPrint(String(describing: error?.localizedDescription ?? translation))
 }
 ```
