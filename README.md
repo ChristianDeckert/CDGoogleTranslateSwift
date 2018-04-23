@@ -5,8 +5,8 @@ Currently suppports german, english, french, italian and spanish.
 
 #### Usage
 ```
-GTService.shared.translate(text: text, to: GTService.TargetLanguage.en) { result, error in
-    let translation = result?.translation
+GTService.shared.translate(text: "die Wälder", to: .en) { result, error in
+    let translation = result?.translation // returns the woods
     //let detectedLanguage = result?.detectedLanguage
     debugPrint(String(describing: error?.localizedDescription ?? translation))
 }
