@@ -13,9 +13,9 @@ public class GTService: NSObject {
     }
     
     public struct Result {
-        let source: String
-        let translation: String
-        let detectedLanguage: String?
+        public let source: String
+        public let translation: String
+        public let detectedLanguage: String?
     }
     
     public static let shared = GTService()

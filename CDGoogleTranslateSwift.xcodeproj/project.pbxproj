@@ -23,6 +23,8 @@
 		AA4B1439208DBB1500B226E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA4B143C208DBB1500B226E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA4B143E208DBB1500B226E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA618710208DCEDD00A0F681 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		AA618712208DCEEC00A0F681 /* CDGoogleTranslateSwift.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CDGoogleTranslateSwift.podspec; sourceTree = "<group>"; };
 		AA6906E1208DBC4200312544 /* GoogleTranslate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleTranslate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -40,6 +42,8 @@
 		AA4B1426208DBB1300B226E5 = {
 			isa = PBXGroup;
 			children = (
+				AA618712208DCEEC00A0F681 /* CDGoogleTranslateSwift.podspec */,
+				AA618710208DCEDD00A0F681 /* LICENSE */,
 				AA6906E0208DBC2800312544 /* Classes */,
 				AA4B1431208DBB1300B226E5 /* CDGoogleTranslateSwift */,
 				AA4B1430208DBB1300B226E5 /* Products */,
